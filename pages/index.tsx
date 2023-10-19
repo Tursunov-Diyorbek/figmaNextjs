@@ -1,8 +1,12 @@
 import Head from "next/head";
 import { Container } from "@mui/material";
-import HeaderMenu from "@/src/companents/Header-menu";
+import { HeaderMenu } from "@/src/companents/Header-menu";
 import { QueryClient, QueryClientProvider } from "react-query";
-import{SwiperHeader} from "@/src/companents/Swiper"
+import { SwiperHeader } from "@/src/companents/Swiper";
+import { Cards } from "@/src/companents/Cards";
+import { Shopping } from "@/src/companents/Shopping";
+import { SwiperCategories } from "@/src/companents/Swiper-Categories";
+import { Footer } from "@/src/companents/Footer";
 
 const queryClient = new QueryClient();
 
@@ -19,7 +23,11 @@ export default function Home() {
         <Container maxWidth="lg">
           <HeaderMenu />
           <SwiperHeader />
+          <Cards />
+          <Shopping />
+          <SwiperCategories />
         </Container>
+        <Footer />
       </QueryClientProvider>
     </>
   );

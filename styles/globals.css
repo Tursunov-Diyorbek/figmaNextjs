@@ -7,3 +7,11 @@
   margin: 0;
   font-weight: 400;
 }
+::-webkit-scrollbar{
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #565759;
+  border-radius: 10px;
+}
