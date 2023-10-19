@@ -2,6 +2,7 @@ import Head from "next/head";
 import { Container } from "@mui/material";
 import HeaderMenu from "@/src/companents/Header-menu";
 import { QueryClient, QueryClientProvider } from "react-query";
+import{SwiperHeader} from "@/src/companents/Swiper"
 
 const queryClient = new QueryClient();
 
@@ -17,6 +18,7 @@ export default function Home() {
       <QueryClientProvider client={queryClient}>
         <Container maxWidth="lg">
           <HeaderMenu />
+          <SwiperHeader />
         </Container>
       </QueryClientProvider>
     </>
