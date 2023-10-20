@@ -20,14 +20,23 @@ export const Cards = () => {
           <Grid xs={12} md={5.8} lg={2.8} className={styles.card} key={index}>
             <Fade delay={100}>
               <Box sx={{ position: "relative" }}>
-                <img
-                  src={item.image}
-                  alt="photo"
-                  style={{
-                    width: 200,
-                    height: 250,
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: 3,
                   }}
-                />
+                >
+                  <img
+                    src={item.image}
+                    alt="photo"
+                    style={{
+                      width: 200,
+                      height: 250,
+                    }}
+                  />
+                </Box>
                 <Box
                   sx={{
                     position: "absolute",
@@ -43,6 +52,11 @@ export const Cards = () => {
                       boxShadow: "0px 0px 1px 1px rgba(0, 0, 0, 0.10)",
                       padding: 1,
                       cursor: "pointer",
+                      borderRadius: "5px",
+                      "&:hover": {
+                        background: "#9DDBAD",
+                        color: "#fff",
+                      },
                     }}
                   >
                     <PiCircleNotchThin />
@@ -52,6 +66,11 @@ export const Cards = () => {
                       boxShadow: "0px 0px 1px 1px rgba(0, 0, 0, 0.10)",
                       padding: 1,
                       cursor: "pointer",
+                      borderRadius: "5px",
+                      "&:hover": {
+                        background: "#9DDBAD",
+                        color: "#fff",
+                      },
                     }}
                   >
                     <CiHeart />
@@ -61,6 +80,11 @@ export const Cards = () => {
                       boxShadow: "0px 0px 1px 1px rgba(0, 0, 0, 0.10)",
                       padding: 1,
                       cursor: "pointer",
+                      borderRadius: "5px",
+                      "&:hover": {
+                        background: "#9DDBAD",
+                        color: "#fff",
+                      },
                     }}
                   >
                     <PiShoppingCartThin />
@@ -84,14 +108,23 @@ export const Cards = () => {
           <Grid xs={12} md={5.8} lg={3.8} className={styles.card} key={index}>
             <Fade delay={100}>
               <Box sx={{ position: "relative" }}>
-                <img
-                  src={item.image}
-                  alt="photo"
-                  style={{
-                    width: 200,
-                    height: 250,
+                <Box
+                  sx={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    padding: 3,
                   }}
-                />
+                >
+                  <img
+                    src={item.image}
+                    alt="photo"
+                    style={{
+                      width: 200,
+                      height: 250,
+                    }}
+                  />
+                </Box>
                 <Box
                   sx={{
                     position: "absolute",
@@ -107,6 +140,11 @@ export const Cards = () => {
                       boxShadow: "0px 0px 1px 1px rgba(0, 0, 0, 0.10)",
                       padding: 1,
                       cursor: "pointer",
+                      borderRadius: "5px",
+                      "&:hover": {
+                        background: "#9DDBAD",
+                        color: "#fff",
+                      },
                     }}
                   >
                     <PiCircleNotchThin />
@@ -116,6 +154,11 @@ export const Cards = () => {
                       boxShadow: "0px 0px 1px 1px rgba(0, 0, 0, 0.10)",
                       padding: 1,
                       cursor: "pointer",
+                      borderRadius: "5px",
+                      "&:hover": {
+                        background: "#9DDBAD",
+                        color: "#fff",
+                      },
                     }}
                   >
                     <CiHeart />
@@ -125,6 +168,11 @@ export const Cards = () => {
                       boxShadow: "0px 0px 1px 1px rgba(0, 0, 0, 0.10)",
                       padding: 1,
                       cursor: "pointer",
+                      borderRadius: "5px",
+                      "&:hover": {
+                        background: "#9DDBAD",
+                        color: "#fff",
+                      },
                     }}
                   >
                     <PiShoppingCartThin />

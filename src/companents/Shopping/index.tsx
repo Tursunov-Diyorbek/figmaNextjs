@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useQuery } from "react-query";
 import axios from "axios";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import styles from "./index.module.sass";
 import MuiAlert from "@mui/material/Alert";
 import * as React from "react";
@@ -51,7 +51,16 @@ export const Shopping = () => {
       <Grid xs={12} md={5}>
         <Box>
           <Bounce delay={100}>
-            <img src={Product.image} alt="photo" style={{ width: 200 }} />
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                padding: 3,
+              }}
+            >
+              <img src={Product.image} alt="photo" style={{ width: 200 }} />
+            </Box>
           </Bounce>
         </Box>
       </Grid>
@@ -82,12 +91,17 @@ export const Shopping = () => {
               <Box
                 sx={{
                   width: 70,
+                  height: 90,
                   boxShadow: "0px 0px 1px 1px rgba(0, 0, 0, 0.10)",
                   padding: 1,
                 }}
                 key={index}
               >
-                <img src={item.image} alt="photo" style={{ width: "100%" }} />
+                <img
+                  src={item.image}
+                  alt="photo"
+                  style={{ width: "100%", height: "100%" }}
+                />
               </Box>
             ))}
           </Box>
