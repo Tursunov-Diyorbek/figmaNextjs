@@ -2,12 +2,13 @@ import { Box, Button, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useQuery } from "react-query";
 import axios from "axios";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import styles from "./index.module.sass";
 import MuiAlert from "@mui/material/Alert";
 import * as React from "react";
 import Snackbar from "@mui/material/Snackbar";
 import { Bounce } from "react-awesome-reveal";
+import { ProductData } from "@/src/Type";
 
 const Alert = React.forwardRef(function Alert(props, ref) {
   return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -20,7 +21,12 @@ export const Shopping = () => {
     axios.get("https://fakestoreapi.com/products"),
   );
 
-  const ProductId = Math.floor(Math.random() * data?.data.length) + 1;
+  const ProductId = useMemo(
+    () => Math.floor(Math.random() * data?.data.length) + 1,
+    [data?.data],
+  );
+
+  console.log(ProductId);
 
   const Product = useMemo(
     () => data?.data[ProductId] || [],
@@ -87,7 +93,7 @@ export const Shopping = () => {
               justifyContent: "space-between",
             }}
           >
-            {data?.data.slice(-4).map((item: string, index: number) => (
+            {data?.data.slice(-4).map((item: ProductData, index: number) => (
               <Box
                 sx={{
                   width: 70,

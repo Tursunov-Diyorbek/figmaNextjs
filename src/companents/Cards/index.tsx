@@ -6,6 +6,7 @@ import axios from "axios";
 import { CiHeart } from "react-icons/ci";
 import { PiShoppingCartThin, PiCircleNotchThin } from "react-icons/pi";
 import { Fade } from "react-awesome-reveal";
+import { ProductData } from "@/src/Type";
 
 export const Cards = () => {
   const { isLoading, error, data } = useQuery("data", () =>
@@ -16,7 +17,7 @@ export const Cards = () => {
     <Box>
       <Typography className={styles.cards__text}>Best Seller Items</Typography>
       <Grid container sx={{ display: "flex", gap: 3 }}>
-        {data?.data.slice(0, 4).map((item: any[], index: number) => (
+        {data?.data.slice(0, 4).map((item: ProductData, index: number) => (
           <Grid xs={12} md={5.8} lg={2.8} className={styles.card} key={index}>
             <Fade delay={100}>
               <Box sx={{ position: "relative" }}>
@@ -104,7 +105,7 @@ export const Cards = () => {
         ))}
       </Grid>
       <Grid container sx={{ display: "flex", gap: 3, marginTop: 3 }}>
-        {data?.data.slice(-3).map((item: any[], index: number) => (
+        {data?.data.slice(-3).map((item: ProductData, index: number) => (
           <Grid xs={12} md={5.8} lg={3.8} className={styles.card} key={index}>
             <Fade delay={100}>
               <Box sx={{ position: "relative" }}>

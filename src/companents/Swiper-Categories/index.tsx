@@ -9,11 +9,11 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper/modules";
 import { useQuery } from "react-query";
 import axios from "axios";
-import { width } from "@mui/system";
 import Grid from "@mui/material/Unstable_Grid2";
 import { Fade } from "react-awesome-reveal";
 import { PiCircleNotchThin, PiShoppingCartThin } from "react-icons/pi";
 import { CiHeart } from "react-icons/ci";
+import { ProductData } from "@/src/Type";
 
 export const SwiperCategories = () => {
   const { isLoading, error, data } = useQuery("product", () =>
@@ -46,7 +46,7 @@ export const SwiperCategories = () => {
         modules={[FreeMode, Pagination]}
         style={{ height: 200 }}
       >
-        {data?.data.map((item: any[], index: number) => (
+        {data?.data.map((item: ProductData, index: number) => (
           <SwiperSlide
             key={index}
             style={{ textAlign: "center", cursor: "pointer" }}
@@ -59,7 +59,7 @@ export const SwiperCategories = () => {
         ))}
       </Swiper>
       <Grid container sx={{ display: "flex", gap: 3, marginTop: 10 }}>
-        {data?.data.slice(0, 4).map((item: any[], index: number) => (
+        {data?.data.slice(0, 4).map((item: ProductData, index: number) => (
           <Grid xs={12} md={5.8} lg={2.8} className={styles.card} key={index}>
             <Fade delay={100}>
               <Box sx={{ position: "relative" }}>
